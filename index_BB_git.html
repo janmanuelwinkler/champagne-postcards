@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8' />
+  <title>Champagne and Postcards</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;500&display=swap" rel="stylesheet">
+  <link rel='stylesheet' href='styles.css' />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <div class="text_container">
+    <div class="text_box">
+      <h1 style="margin-bottom: 30px;">
+        Champagne and Postcards
+      </h1>
+      <p style=" text-align: justify;">
+        <b>Auf der Speisekarte für den Weihnachtsverkauf: zwei hervorragende Champagner von Régis Poissinet.</b>
+      </p>
+      <p style="text-align: justify;">
+        Eine Begegnung, Alchemie, eine Geschichte über den Grand Canyon, die Nase, der erste Schluck. Régis Poissinet
+        verfolgt eine Vision, die uns eine Präzision voller Emotionen bietet.
+      </p>
+      <p style="text-align: justify; margin-bottom: 30px;">
+        Wir haben das Glück diesen herrlichen Champagner mit Dir teilen zu können. Von dem hervorragenden <em>Terre de
+          Rosée</em> haben wir 100 Flaschen zu verkaufen, <em>first come - first serve</em>, max. 2 Flaschen pro Person.
+      </p>
+
+      <p style="text-align: justify;">
+        <b>Au menu de la vente de Noël 2021: deux champagnes époustouflants de Régis Poissinet.</b>
+      </p>
+      <p style="text-align: justify;">
+        Une rencontre, l’alchimie, une histoire au-dessus du Grand Canyon, le nez, la première gorgée. Régis Poissinet à
+        une quête, qui nous offre une justesse remplie d’émotion.
+      </p>
+      <p style="text-align: justify;">
+        Nous avons la chance de partager ce magnifique champagne avec toi. En raison des quantités très limitées,
+        seulement 100 bouteilles de champagne <em>Terre de Rosée</em> sont à vendre, <em>first come - first serve</em>,
+        max. 2 par personne.
+      </p>
+    </div>
+  </div>
+
+
+  <div class="text_container">
+    <div class="text_box_narrow">
+      <p><b>Verkaufsdaten: 20 November bis 5 Dezember</b></p>
+      <p><b>Dates des ventes: du 20 novembre au 5 décembre</b></p>
+      <p><b id="demo"></b></p>
+      </b>
+    </div>
+  </div>
+
+  <div class='champagne-container'>
+    <div class='champagne'>
+      <div class='grid-item-card'>
+        <img src='images/MENU_Terre_Irizee.jpg' />
+      </div>
+      <div class='grid-item-buybutton'>
+        <div id='product-component-[id]'></div>
+        <script type="text/javascript">
+          /*<![CDATA[*/
+          (function () {
+            var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+            if (window.ShopifyBuy) {
+              if (window.ShopifyBuy.UI) {
+                ShopifyBuyInit();
+              } else {
+                loadScript();
+              }
+            } else {
+              loadScript();
+            }
+            function loadScript() {
+              var script = document.createElement('script');
+              script.async = true;
+              script.src = scriptURL;
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+              script.onload = ShopifyBuyInit;
+            }
+            function ShopifyBuyInit() {
+              var client = ShopifyBuy.buildClient({
+                domain: '[shop_name].myshopify.com',
+                storefrontAccessToken: '[token]',
+              });
+              ShopifyBuy.UI.onReady(client).then(function (ui) {
+                ui.createComponent('product', {
+                  id: '[product_id]',
+                  node: document.getElementById('product-component-[id]'),
+                  moneyFormat: 'CHF%20%7B%7Bamount%7D%7D',
+                  options: {
+                    "product": {
+                      "contents": {
+                        "img": false,
+                        "title": false,
+                        "price": true,
+                        "quantity": true,
+                        "quantityIncrement": true,
+                        "quantityDecrement": true,
+                        "quantityInput": true,
+                      },
+
+                      "styles": {
+                        "product": {
+                          "@media (min-width: 601px)": {
+                            "max-width": "calc(25% - 20px)",
+                            "margin-left": "20px",
+                            "margin-bottom": "50px"
+                          },
+                        },
+                        "price": {
+                          "font-family": "Chakra Petch, sans-serif",
+                          "font-size": "12px",
+                          "color": "black",
+                          "background-color": "white",
+                          "padding": "12px",
+                          "border": "1px solid black",
+
+                          "display": "flex",
+                          "justify-content": "center",
+                          "width": "97px"
+
+                        },
+                        "button": {
+                          "font-family": "Chakra Petch, sans-serif",
+                          "font-size": "12px",
+                          "color": "black",
+                          "padding-top": "12px",
+                          "padding-bottom": "12px",
+                          ":hover": {
+                            "background-color": "#8796a1"
+                          },
+                          "background-color": "white",
+                          ":focus": {
+                            "background-color": "#8796a1"
+                          },
+                          "border-radius": "0px",
+                          "border": "1px solid black",
+                          "padding-left": "48px",
+                          "padding-right": "48px",
+                          "float": "left",
+                        },
+
+                        "quantityInput": {
+                          "font-family": "Chakra Petch, sans-serif",
+                          "color": "black",
+                          "border-color": "black",
+                          "background-color": "white",
+                          "border-radius": "0px",
+                          "padding": "11px 0px"
+
+                        },
+
+                        "quantityIncrement": {
+                          "color": "black",
+                          "margin-top": "0",
+                          "border-color": "black",
+                          "border-radius": "0px",
+                          "background-color": "white",
+                          ":hover": {
+                            "background-color": "#8796a1"
+                          },
+                        },
+
+                        "quantityDecrement": {
+                          "color": "black",
+                          "margin-top": "0",
+                          "border-color": "black",
+                          "border-radius": "0px",
+                          "background-color": "white",
+                          ":hover": {
+                            "background-color": "#8796a1"
+                          },
+                        }
+                      },
+                      "googleFonts": [
+                        "Chakra Petch"
+                      ]
+                    },
+                    "cart": {
+
+                      "styles": {
+                        "cart": {
+                          "font-family": "Chakra Petch, sans-serif",
+                        },
+
+                        "button": {
+                          "font-size": "16px",
+                          "padding-top": "16px",
+                          "padding-bottom": "16px",
+                          ":hover": {
+                            "background-color": "#8796a1"
+                          },
+                          "background-color": "#96a7b3",
+                          ":focus": {
+                            "background-color": "#8796a1"
+                          },
+                          "border-radius": "0px"
+                        }
+                      },
+                      "text": {
+                        "total": "Subtotal",
+                        "button": "Checkout"
+                      },
+                      "popup": false,
+                      "googleFonts": [
+                        "Chakra Petch"
+                      ]
+                    },
+                    "toggle": {
+                      "styles": {
+                        "toggle": {
+                          "background-color": "white",
+                          ":hover": {
+                            "background-color": "#8796a1"
+                          },
+                          ":focus": {
+                            "background-color": "#8796a1"
+                          }
+                        },
+                        "count": {
+                          "color": "black",
+                          "font-family": "Chakra Petch, sans-serif",
+                          "font-size": "16px"
+                        },
+                        "iconPath": {
+                          "fill": "black"
+                        }
+                      },
+                      "googleFonts": [
+                        "Chakra Petch"
+                      ]
+                    }
+                  }
+                });
+              });
+            }
+          })();
+        </script>
+      </div>
+    </div>
+  </div>
+
+  <div class='champagne-container'>
+    <div class='champagne'>
+      <div class='grid-item-card'>
+        <img src='images/MENU_Terre_Rosee.jpg' />
+      </div>
+      <div class='grid-item-buybutton'>
+        <div id='product-component-[id]'></div>
+
+        <script type="text/javascript">
+          /*<![CDATA[*/
+          (function () {
+            var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+            if (window.ShopifyBuy) {
+              if (window.ShopifyBuy.UI) {
+                ShopifyBuyInit();
+              } else {
+                loadScript();
+              }
+            } else {
+              loadScript();
+            }
+            function loadScript() {
+              var script = document.createElement('script');
+              script.async = true;
+              script.src = scriptURL;
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+              script.onload = ShopifyBuyInit;
+            }
+            function ShopifyBuyInit() {
+              var client = ShopifyBuy.buildClient({
+                domain: '[shop_name].myshopify.com',
+                storefrontAccessToken: '[token]',
+              });
+              ShopifyBuy.UI.onReady(client).then(function (ui) {
+                ui.createComponent('product', {
+                  id: '[product_id]',
+                  node: document.getElementById('product-component-[id]'),
+                  moneyFormat: 'CHF%20%7B%7Bamount%7D%7D',
+                  options: {
+                    "product": {
+                      "contents": {
+                        "img": false,
+                        "title": false,
+                        "price": true,
+                        "quantity": true,
+                        "quantityIncrement": true,
+                        "quantityDecrement": true,
+                        "quantityInput": true,
+                      },
+
+                      "styles": {
+                        "product": {
+                          "@media (min-width: 601px)": {
+                            "max-width": "calc(25% - 20px)",
+                            "margin-left": "20px",
+                            "margin-bottom": "50px"
+                          },
+                        },
+                        "price": {
+                          "font-family": "Chakra Petch, sans-serif",
+                          "font-size": "12px",
+                          "color": "black",
+                          "background-color": "white",
+                          "padding": "12px",
+                          "border": "1px solid black",
+
+                          "display": "flex",
+                          "justify-content": "center",
+                          "width": "97px"
+
+                        },
+
+                        "button": {
+                          "font-family": "Chakra Petch, sans-serif",
+                          "font-size": "12px",
+                          "color": "black",
+                          "padding-top": "12px",
+                          "padding-bottom": "12px",
+                          ":hover": {
+                            "background-color": "#8796a1"
+                          },
+                          "background-color": "white",
+                          ":focus": {
+                            "background-color": "#8796a1"
+                          },
+                          "border-radius": "0px",
+                          "border": "1px solid black",
+                          "padding-left": "48px",
+                          "padding-right": "48px",
+                          "float": "left",
+                        },
+
+                        "quantityInput": {
+                          "font-family": "Chakra Petch, sans-serif",
+                          "color": "black",
+                          "border-color": "black",
+                          "background-color": "white",
+                          "border-radius": "0px",
+                          "padding": "11px 0px"
+                        },
+
+                        "quantityIncrement": {
+                          "color": "black",
+                          "margin-top": "0",
+                          "border-color": "black",
+                          "border-radius": "0px",
+                          "background-color": "white",
+                          ":hover": {
+                            "background-color": "#8796a1"
+                          },
+                        },
+
+                        "quantityDecrement": {
+                          "color": "black",
+                          "margin-top": "0",
+                          "border-color": "black",
+                          "border-radius": "0px",
+                          "background-color": "white",
+                          ":hover": {
+                            "background-color": "#8796a1"
+                          },
+                        }
+                      },
+                      "googleFonts": [
+                        "Chakra Petch"
+                      ]
+                    },
+                    "cart": {
+
+                      "styles": {
+                        "cart": {
+                          "font-family": "Chakra Petch, sans-serif",
+                        },
+
+                        "button": {
+                          "font-size": "16px",
+                          "padding-top": "16px",
+                          "padding-bottom": "16px",
+                          ":hover": {
+                            "background-color": "#8796a1"
+                          },
+                          "background-color": "#96a7b3",
+                          ":focus": {
+                            "background-color": "#8796a1"
+                          },
+                          "border-radius": "0px"
+                        }
+                      },
+                      "text": {
+                        "total": "Subtotal",
+                        "button": "Checkout"
+                      },
+                      "popup": false,
+                      "googleFonts": [
+                        "Chakra Petch"
+                      ]
+                    },
+                    "toggle": {
+                      "styles": {
+                        "toggle": {
+                          "background-color": "white",
+                          ":hover": {
+                            "background-color": "#8796a1"
+                          },
+                          ":focus": {
+                            "background-color": "#8796a1"
+                          }
+                        },
+                        "count": {
+                          "font-family": "Chakra Petch, sans-serif",
+                          "font-size": "16px",
+                          "color": "black",
+                        },
+                        "iconPath": {
+                          "fill": "black"
+                        }
+                      },
+                      "googleFonts": [
+                        "Chakra Petch"
+                      ]
+                    }
+                  }
+                });
+              });
+            }
+          })();
+        </script>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="text_container">
+    <div class="text_box">
+      <p>
+        <b>Abholung des Champagners</b><br>
+        Der genaue Termin wird den Käufern*innen Ende November mitgeteilt.
+      </p>
+      <p>
+        <b> Retrait des commandes</b> <br>
+        La date exacte sera communiquée aux acheteurs, fin novembre.
+      </p>
+    </div>
+  </div>
+
+  <div class="text_container">
+    <div class="text_box">
+      <p>
+        <b>Lieferung</b><br>
+        Ein Lieferservice ist ebenfalls verfügbar. Gegen eine Gebühr von 25CHF wird der Champagner nach Hause geliefert.
+      </p>
+      <p>
+        <b> Livraison</b><br>
+        La livraison du champagne à domicile est possible moyennant une contribution de 25CHF.
+      </p>
+    </div>
+  </div>
+
+  <div class="text_container">
+    <div class="text_box">
+      <p></p>
+      <p>
+        <b> Champagne & Postcards</b><br>
+        Thomas & Nicolas & Nikolaj <br>
+        <a href="mailto:champagneandpostcards@gmail.com" style="padding-top: 5px;">champagneandpostcards@gmail.com</a>
+      </p>
+    </div>
+  </div>
+
+</body>
+
+</html>
+
+
+<script>
+  // Set the date we're counting down to
+  var countDownDate = new Date("2021-12-05T24:00:00Z").getTime();
+
+  // Update the count down every 1 second
+  var x = setInterval(function () {
+
+    // Get today's date and time
+    var now = new Date().getTime();
+
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Display the result in the element with id="demo"
+    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+      + minutes + "m " + seconds + "s ";
+
+    /* var text = document.getElementById('demo');
+    text.style.color = (text.style.color == 'black') ? 'red' : 'black'; */
+
+    // If the count down is finished, write some text
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+  }, 1000);
+</script>

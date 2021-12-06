@@ -1,0 +1,82 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight:300;
+  }
+
+
+html {
+  background: url(images/REIMS_CATHEDRAL_2021_0039.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+b {
+  font-weight:500;
+}
+
+p {line-height: 1.5;   /* within paragraph */
+  margin-bottom: 10px;}
+
+body {
+  text-align: center;
+  font-family: 'Chakra Petch', sans-serif;
+  color:black;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.text_container{
+  padding: 20px 0;
+
+}
+.text_box{
+  width: 90%;
+  max-width: 700px;
+  padding: 10px;
+  background-color: white;
+}
+
+.text_box_narrow{
+  display: inline-block;
+  padding: 10px;
+  background-color: white;
+}
+
+.champagne-container {
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .champagne {
+    width: 90%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .grid-item-card {
+    width: 700px;
+    align-self: flex-start;
+    flex-grow: 1;
+  }
+  .grid-item-buybutton {
+    margin-left: 0px;
+    align-content: flex-start;
+    align-self: flex-start;
+  }
+
+  @media (min-width: 1023px) {
+    .grid-item-buybutton {
+      margin-left: 20px;
+      width: 200px;
+    }
+  }
